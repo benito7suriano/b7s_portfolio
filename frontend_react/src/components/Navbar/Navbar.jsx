@@ -28,13 +28,15 @@ const Navbar = () => {
             whileInView={{ x: [300, 0] }}
             transition={{ duration: 0.85, ease: 'easeInOut' }}>
             <HiX onClick={() => setToggle(false)} />
-            {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
-              <li key={`item`} className='app__flex p-text'>
-                <a href={`#${item}`} onClick={() => setToggle(false)}>
-                  {item}
-                </a>
-              </li>
-            ))}
+            <ul>
+              {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
+                <li key={`item`} className='app__flex p-text'>
+                  <a href={`#${item}`} onClick={() => setToggle(false)}>
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </motion.div>
         )}
       </div>
