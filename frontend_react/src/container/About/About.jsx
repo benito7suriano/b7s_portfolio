@@ -21,6 +21,11 @@ const abouts = [
     description: 'I am a good UI/UX designer',
     imgUrl: images.about03,
   },
+  {
+    title: 'NERD Stack',
+    description: "I'm a fullstack developer",
+    imgUrl: images.about04,
+  },
 ]
 
 const About = () => {
