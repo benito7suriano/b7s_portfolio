@@ -13,6 +13,15 @@ const Work = () => {
   const [activeFilter, setActiveFilter] = useState('All')
   const [animatecard, setAnimatecard] = useState({ y: 0, opacity: 1 })
 
+  useEffect(() => {
+    const query = '*[_type == "works"]'
+
+    client.fetch(query).then((data) => {
+      setWorks(data)
+      setFilterWork(data)
+    })
+  }, [])
+
   return <div>Work</div>
 }
 
