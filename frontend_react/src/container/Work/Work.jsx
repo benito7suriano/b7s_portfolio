@@ -11,4 +11,4 @@ const Work = () => {
   return <div>Work</div>
 }
 
-export default Work
+export default AppWrap(Work)
