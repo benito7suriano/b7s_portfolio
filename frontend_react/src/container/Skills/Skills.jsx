@@ -17,11 +17,12 @@ const Skills = () => {
     const skillsQuery = '*[_type == "skills"]'
 
     client.fetch(query).then((data) => {
-      const sorted = data.sort((a, b) => b.year - a.year)
-      setExperiences(sorted)
+      data.sort((a, b) => b.year - a.year)
+      setExperiences(data)
     })
 
     client.fetch(skillsQuery).then((data) => {
+      data.sort((a, b) => a.name - b.name)
       setSkills(data)
     })
   }, [])
