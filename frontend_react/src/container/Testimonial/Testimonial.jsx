@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi'
 import { motion } from 'framer-motion'
 
@@ -14,6 +14,19 @@ const Testimonial = () => {
   const handleClick = (index) => {
     setCurrentIndex(index)
   }
+
+  useEffect(() => {
+    const testimonialsQuery = '*[_type == "testimonials"]'
+    const brandsQuery = '*[_type == "brands"]'
+
+    client.fetch(testimonialsQuery).then((data) => {
+      setTestimonials(data)
+    })
+
+    client.fetch(brandsQuery).then((data) => {
+      setBrands(data)
+    })
+  }, [])
 
   return <div>Testimonial</div>
 }
