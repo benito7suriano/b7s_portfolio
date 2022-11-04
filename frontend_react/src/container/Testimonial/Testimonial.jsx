@@ -30,7 +30,7 @@ const Testimonial = () => {
 
   return (
     <>
-      {testimonials.length && (
+      {testimonials.length ? (
         <>
           <div className='app__testimonial-item app__flex'>
             <img
@@ -70,6 +70,8 @@ const Testimonial = () => {
             </div>
           </div>
         </>
+      ) : (
+        ''
       )}
     </>
   )
