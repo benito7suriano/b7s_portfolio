@@ -28,13 +28,15 @@ const Testimonial = () => {
     })
   }, [])
 
+  console.log('testimonials:', testimonials)
+
   return (
     <>
       {testimonials.length ? (
         <>
           <div className='app__testimonial-item app__flex'>
             <img
-              src={urlFor(testimonials[currentIndex].imgUrl)}
+              src={urlFor(testimonials[currentIndex].imgurl)}
               alt={testimonials[currentIndex].name}
             />
             <div className='app__testimonial-content'>
