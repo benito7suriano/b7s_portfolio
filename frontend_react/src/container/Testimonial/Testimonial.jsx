@@ -28,8 +28,6 @@ const Testimonial = () => {
     })
   }, [])
 
-  console.log('testimonials:', testimonials)
-
   return (
     <>
       {testimonials.length ? (
