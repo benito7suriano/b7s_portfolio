@@ -14,6 +14,7 @@ const Footer = () => {
 
   const handleChangeInput = (e) => {
     const { name, value } = e.target
+    // dynamic object keys i.e.: [name]
     setFormData({ ...formData, [name]: value })
   }
 
@@ -62,7 +63,7 @@ const Footer = () => {
               placeholder='Your Name'
               name='username'
               value={username}
-              onChange={() => {}}
+              onChange={() => handleChangeInput}
             />
           </div>
           <div className='app__flex'>
@@ -72,7 +73,7 @@ const Footer = () => {
               placeholder='Your Email'
               name='email'
               value={email}
-              onChange={() => {}}
+              onChange={() => handleChangeInput}
             />
           </div>
           <div>
@@ -81,7 +82,7 @@ const Footer = () => {
               placeholder='Your Message'
               value={message}
               name='message'
-              onChange={() => {}}
+              onChange={() => handleChangeInput}
             />
           </div>
           <button type='button' className='p-text' onClick={handleSubmit}>
